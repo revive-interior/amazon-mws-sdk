@@ -92,7 +92,7 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
     }
 
     private function verifySupportedContentType($supplied) {
-    if (!($supplied == self::$DEFAULT_CONTENT_TYPE)) {
+    if ($supplied->getContentType() == self::$DEFAULT_CONTENT_TYPE->getContentType()) {
     		throw new MarketplaceWebService_Exception(array('Message' =>
     			"Unsupported ContentType " .  $supplied->getContentType() .
     			" ContentType must be " . self::$DEFAULT_CONTENT_TYPE->getContentType()));
