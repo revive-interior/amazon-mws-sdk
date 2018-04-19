@@ -51,13 +51,13 @@ class MarketplaceWebService_Model_TypeList extends MarketplaceWebService_Model
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Type' => array('FieldValue' => array(), 'FieldType' => array('string')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Type .
      *
      * @return array of string Type
@@ -76,7 +76,7 @@ class MarketplaceWebService_Model_TypeList extends MarketplaceWebService_Model
     public function setType($type)
     {
         if (!$this->isNumericArray($type)) {
-            $type =  array ($type);
+            $type =  array($type);
         }
         $this->fields['Type']['FieldValue'] = $type;
         return $this;
@@ -107,10 +107,6 @@ class MarketplaceWebService_Model_TypeList extends MarketplaceWebService_Model
      */
     public function isSetType()
     {
-        return count ($this->fields['Type']['FieldValue']) > 0;
+        return count($this->fields['Type']['FieldValue']) > 0;
     }
-
-
-
-
 }

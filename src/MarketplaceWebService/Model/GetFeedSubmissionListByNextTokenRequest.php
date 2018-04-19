@@ -55,7 +55,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extend
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -64,7 +64,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extend
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -243,8 +243,4 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extend
     {
         return !is_null($this->fields['NextToken']['FieldValue']);
     }
-
-
-
-
 }

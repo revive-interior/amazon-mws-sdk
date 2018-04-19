@@ -53,7 +53,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'GetReportScheduleCountResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportScheduleCountResult'),
         'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
         );
@@ -72,15 +72,14 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
         $dom = new DOMDocument();
         $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
-    	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
+        $xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportScheduleCountResponse');
         if ($response->length == 1) {
             return new MarketplaceWebService_Model_GetReportScheduleCountResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportScheduleCountResponse from provided XML.
+            throw new Exception("Unable to construct MarketplaceWebService_Model_GetReportScheduleCountResponse from provided XML.
                                   Make sure that GetReportScheduleCountResponse is a root element");
         }
-
     }
 
     /**
@@ -126,7 +125,6 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
     public function isSetGetReportScheduleCountResult()
     {
         return !is_null($this->fields['GetReportScheduleCountResult']['FieldValue']);
-
     }
 
     /**
@@ -172,7 +170,6 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
 
 
@@ -193,11 +190,13 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

@@ -51,13 +51,13 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResult extends Marketpla
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -101,8 +101,4 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResult extends Marketpla
     {
         return !is_null($this->fields['Count']['FieldValue']);
     }
-
-
-
-
 }

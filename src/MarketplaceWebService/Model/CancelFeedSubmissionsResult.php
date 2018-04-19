@@ -53,14 +53,14 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsResult extends Marketplac
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
         'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -124,7 +124,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsResult extends Marketplac
     public function setFeedSubmissionInfoList($feedSubmissionInfo)
     {
         if (!$this->_isNumericArray($feedSubmissionInfo)) {
-            $feedSubmissionInfo =  array ($feedSubmissionInfo);
+            $feedSubmissionInfo =  array($feedSubmissionInfo);
         }
         $this->fields['FeedSubmissionInfo']['FieldValue'] = $feedSubmissionInfo;
         return $this;
@@ -156,10 +156,6 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsResult extends Marketplac
      */
     public function isSetFeedSubmissionInfo()
     {
-        return count ($this->fields['FeedSubmissionInfo']['FieldValue']) > 0;
+        return count($this->fields['FeedSubmissionInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

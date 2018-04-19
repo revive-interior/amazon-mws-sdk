@@ -25,7 +25,7 @@
  * The Amazon Marketplace Web Service contain APIs for inventory and order management.
  *
  */
-class  MarketplaceWebService_Mock implements MarketplaceWebService_Interface
+class MarketplaceWebService_Mock implements MarketplaceWebService_Interface
 {
     // Public API ------------------------------------------------------------//
 
@@ -425,6 +425,6 @@ class  MarketplaceWebService_Mock implements MarketplaceWebService_Interface
 
     private function invoke($actionName)
     {
-        return $xml = file_get_contents('MarketplaceWebService/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
+        return $xml = file_get_contents('MarketplaceWebService/Mock/' . $actionName . 'Response.xml', /** search include path */ true);
     }
 }

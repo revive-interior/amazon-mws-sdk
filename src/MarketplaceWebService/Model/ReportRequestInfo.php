@@ -65,7 +65,7 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'ReportRequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'StartDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
@@ -527,5 +527,4 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
     {
         return !is_null($this->fields['CompletedDate']['FieldValue']);
     }
-
 }

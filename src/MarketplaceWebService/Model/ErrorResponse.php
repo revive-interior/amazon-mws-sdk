@@ -53,7 +53,7 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Error' => array('FieldValue' => array(), 'FieldType' => 'MarketplaceWebService_Model_Error'),
         'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
@@ -72,15 +72,14 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
         $dom = new DOMDocument();
         $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
-    	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
+        $xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:ErrorResponse');
         if ($response->length == 1) {
             return new MarketplaceWebService_Model_ErrorResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_ErrorResponse from provided XML.
+            throw new Exception("Unable to construct MarketplaceWebService_Model_ErrorResponse from provided XML.
                                   Make sure that ErrorResponse is a root element");
         }
-
     }
 
     /**
@@ -102,7 +101,7 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
     public function setError($error)
     {
         if (!$this->_isNumericArray($error)) {
-            $error =  array ($error);
+            $error =  array($error);
         }
         $this->fields['Error']['FieldValue'] = $error;
         return $this;
@@ -134,7 +133,7 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
      */
     public function isSetError()
     {
-        return count ($this->fields['Error']['FieldValue']) > 0;
+        return count($this->fields['Error']['FieldValue']) > 0;
     }
 
     /**
@@ -200,11 +199,13 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

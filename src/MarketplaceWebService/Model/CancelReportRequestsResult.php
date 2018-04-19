@@ -53,14 +53,14 @@ class MarketplaceWebService_Model_CancelReportRequestsResult extends Marketplace
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
         'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportRequestInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -124,7 +124,7 @@ class MarketplaceWebService_Model_CancelReportRequestsResult extends Marketplace
     public function setReportRequestInfoList($reportRequestInfo)
     {
         if (!$this->_isNumericArray($reportRequestInfo)) {
-            $reportRequestInfo =  array ($reportRequestInfo);
+            $reportRequestInfo =  array($reportRequestInfo);
         }
         $this->fields['ReportRequestInfo']['FieldValue'] = $reportRequestInfo;
         return $this;
@@ -156,10 +156,6 @@ class MarketplaceWebService_Model_CancelReportRequestsResult extends Marketplace
      */
     public function isSetReportRequestInfo()
     {
-        return count ($this->fields['ReportRequestInfo']['FieldValue']) > 0;
+        return count($this->fields['ReportRequestInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

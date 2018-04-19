@@ -61,7 +61,7 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'ReportId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportRequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -72,7 +72,7 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the ReportId property.
      *
      * @return string ReportId
@@ -341,8 +341,4 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['AcknowledgedDate']['FieldValue']);
     }
-
-
-
-
 }

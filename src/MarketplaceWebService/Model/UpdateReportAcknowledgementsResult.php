@@ -53,14 +53,14 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsResult extends Mar
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
         'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -124,7 +124,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsResult extends Mar
     public function setReportInfoList($reportInfo)
     {
         if (!$this->_isNumericArray($reportInfo)) {
-            $reportInfo =  array ($reportInfo);
+            $reportInfo =  array($reportInfo);
         }
         $this->fields['ReportInfo']['FieldValue'] = $reportInfo;
         return $this;
@@ -156,10 +156,6 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsResult extends Mar
      */
     public function isSetReportInfo()
     {
-        return count ($this->fields['ReportInfo']['FieldValue']) > 0;
+        return count($this->fields['ReportInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

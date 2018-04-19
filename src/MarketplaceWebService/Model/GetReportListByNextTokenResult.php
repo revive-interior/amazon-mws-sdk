@@ -55,7 +55,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
         'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportInfo')),
@@ -63,7 +63,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the NextToken property.
      *
      * @return string NextToken
@@ -172,7 +172,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
     public function setReportInfoList($reportInfo)
     {
         if (!$this->_isNumericArray($reportInfo)) {
-            $reportInfo =  array ($reportInfo);
+            $reportInfo =  array($reportInfo);
         }
         $this->fields['ReportInfo']['FieldValue'] = $reportInfo;
         return $this;
@@ -204,10 +204,6 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      */
     public function isSetReportInfo()
     {
-        return count ($this->fields['ReportInfo']['FieldValue']) > 0;
+        return count($this->fields['ReportInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

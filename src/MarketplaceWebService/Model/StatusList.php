@@ -51,13 +51,13 @@ class MarketplaceWebService_Model_StatusList extends MarketplaceWebService_Model
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Status' => array('FieldValue' => array(), 'FieldType' => array('string')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Status .
      *
      * @return array of string Status
@@ -76,7 +76,7 @@ class MarketplaceWebService_Model_StatusList extends MarketplaceWebService_Model
     public function setStatus($status)
     {
         if (!$this->isNumericArray($status)) {
-            $status =  array ($status);
+            $status =  array($status);
         }
         $this->fields['Status']['FieldValue'] = $status;
         return $this;
@@ -107,10 +107,6 @@ class MarketplaceWebService_Model_StatusList extends MarketplaceWebService_Model
      */
     public function isSetStatus()
     {
-        return count ($this->fields['Status']['FieldValue']) > 0;
+        return count($this->fields['Status']['FieldValue']) > 0;
     }
-
-
-
-
 }

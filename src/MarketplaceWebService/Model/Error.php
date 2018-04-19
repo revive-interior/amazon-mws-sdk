@@ -57,7 +57,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Type' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Code' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -66,7 +66,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Type property.
      *
      * @return string Type
@@ -244,10 +244,5 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
     public function isSetDetail()
     {
         return !is_null($this->fields['Detail']['FieldValue']);
-
     }
-
-
-
-
 }

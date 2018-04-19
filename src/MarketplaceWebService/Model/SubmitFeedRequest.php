@@ -64,39 +64,40 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
 
     public function __construct($data = null)
     {
-    	self::$DEFAULT_CONTENT_TYPE = new MarketplaceWebService_Model_ContentType(
-    		array('ContentType' => 'application/octet-stream'));
+        self::$DEFAULT_CONTENT_TYPE = new MarketplaceWebService_Model_ContentType(
+            array('ContentType' => 'application/octet-stream')
+        );
 
         // Here we're setting the content-type field directly to the object, but beware the actual
         // method of construction from associative arrays from the client interface would do something like:
         // $parameters = array ('ContentType' => array('ContentType' => 'application/octet-stream'));
 
-        $this->fields = array (
+        $this->fields = array(
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
-        'FeedContent' => array ('FieldValue' => null, 'FieldType' => 'string'),
+        'FeedContent' => array('FieldValue' => null, 'FieldType' => 'string'),
         'FeedType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'PurgeAndReplace' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ContentMd5' => array ('FieldValue' => null, 'FieldType' => 'string'),
- 	'ContentType' => array ('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'MarketplaceWebService_Model_ContentType')
+        'ContentMd5' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'ContentType' => array('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'MarketplaceWebService_Model_ContentType')
         );
 
         parent::__construct($data);
 
         if (!is_null($this->fields['ContentType']['FieldValue'])) {
-        	$this->verifySupportedContentType($this->fields['ContentType']['FieldValue']);
+            $this->verifySupportedContentType($this->fields['ContentType']['FieldValue']);
         }
-
     }
 
-    private function verifySupportedContentType($supplied) {
-    if ($supplied->getContentType() != self::$DEFAULT_CONTENT_TYPE->getContentType()) {
-    		throw new MarketplaceWebService_Exception(array('Message' =>
-    			"Unsupported ContentType " .  $supplied->getContentType() .
-    			" ContentType must be " . self::$DEFAULT_CONTENT_TYPE->getContentType()));
-    	}
+    private function verifySupportedContentType($supplied)
+    {
+        if ($supplied->getContentType() != self::$DEFAULT_CONTENT_TYPE->getContentType()) {
+            throw new MarketplaceWebService_Exception(array('Message' =>
+                "Unsupported ContentType " .  $supplied->getContentType() .
+                " ContentType must be " . self::$DEFAULT_CONTENT_TYPE->getContentType()));
+        }
     }
 
     /**
@@ -110,14 +111,16 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
         return $this->fields['ContentType']['FieldValue'];
     }
 
-    public function setContentType($value) {
-    	$this->verifySupportedContentType($value);
-    	$this->fields['ContentType']['FieldValue'] = $value;
+    public function setContentType($value)
+    {
+        $this->verifySupportedContentType($value);
+        $this->fields['ContentType']['FieldValue'] = $value;
         return $this;
     }
 
-    public function isSetContentType() {
-    	return !is_null($this->fields['ContentType']['FieldValue']);
+    public function isSetContentType()
+    {
+        return !is_null($this->fields['ContentType']['FieldValue']);
     }
 
     /**
@@ -273,8 +276,8 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      */
     public function setMarketplaceIdList($value)
     {
-	$marketplaceIdList = new MarketplaceWebService_Model_IdList();
-	$marketplaceIdList->setId($value['Id']);
+        $marketplaceIdList = new MarketplaceWebService_Model_IdList();
+        $marketplaceIdList->setId($value['Id']);
         $this->fields['MarketplaceIdList']['FieldValue'] = $marketplaceIdList;
         return;
     }
@@ -300,7 +303,6 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
     public function isSetMarketplaceIdList()
     {
         return !is_null($this->fields['MarketplaceIdList']['FieldValue']);
-
     }
 
     /**
@@ -482,5 +484,4 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
     {
         return !is_null($this->fields['ContentMd5']['FieldValue']);
     }
-
 }

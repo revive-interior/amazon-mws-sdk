@@ -61,7 +61,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'FeedSubmissionId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'FeedType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'SubmittedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
@@ -72,7 +72,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the FeedSubmissionId property.
      *
      * @return string FeedSubmissionId
@@ -341,8 +341,4 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
     {
         return !is_null($this->fields['CompletedProcessingDate']['FieldValue']);
     }
-
-
-
-
 }

@@ -53,7 +53,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResponse extends Marke
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'GetReportListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportListByNextTokenResult'),
         'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
         );
@@ -72,15 +72,14 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResponse extends Marke
         $dom = new DOMDocument();
         $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
-    	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
+        $xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportListByNextTokenResponse');
         if ($response->length == 1) {
             return new MarketplaceWebService_Model_GetReportListByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportListByNextTokenResponse from provided XML.
+            throw new Exception("Unable to construct MarketplaceWebService_Model_GetReportListByNextTokenResponse from provided XML.
                                   Make sure that GetReportListByNextTokenResponse is a root element");
         }
-
     }
 
     /**
@@ -126,7 +125,6 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResponse extends Marke
     public function isSetGetReportListByNextTokenResult()
     {
         return !is_null($this->fields['GetReportListByNextTokenResult']['FieldValue']);
-
     }
 
     /**
@@ -172,7 +170,6 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResponse extends Marke
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
 
 
@@ -193,11 +190,13 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResponse extends Marke
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

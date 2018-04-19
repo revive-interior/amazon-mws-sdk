@@ -63,7 +63,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -76,7 +76,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -229,8 +229,8 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      */
     public function setMarketplaceIdList($value)
     {
-	$marketplaceIdList = new MarketplaceWebService_Model_IdList();
-	$marketplaceIdList->setId($value['Id']);
+        $marketplaceIdList = new MarketplaceWebService_Model_IdList();
+        $marketplaceIdList->setId($value['Id']);
         $this->fields['MarketplaceIdList']['FieldValue'] = $marketplaceIdList;
         return;
     }
@@ -256,7 +256,6 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
     public function isSetMarketplaceIdList()
     {
         return !is_null($this->fields['MarketplaceIdList']['FieldValue']);
-
     }
 
     /**
@@ -438,6 +437,4 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
     {
         return !is_null($this->fields['ReportOptions']['FieldValue']);
     }
-
-
 }

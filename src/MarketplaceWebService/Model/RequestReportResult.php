@@ -51,13 +51,13 @@ class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebServ
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ReportRequestInfo'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the ReportRequestInfo.
      *
      * @return ReportRequestInfo ReportRequestInfo
@@ -100,10 +100,5 @@ class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebServ
     public function isSetReportRequestInfo()
     {
         return !is_null($this->fields['ReportRequestInfo']['FieldValue']);
-
     }
-
-
-
-
 }

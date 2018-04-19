@@ -61,7 +61,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountRequest extends Marketpl
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -73,7 +73,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountRequest extends Marketpl
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -251,7 +251,6 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountRequest extends Marketpl
     public function isSetFeedTypeList()
     {
         return !is_null($this->fields['FeedTypeList']['FieldValue']);
-
     }
 
     /**
@@ -297,7 +296,6 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountRequest extends Marketpl
     public function isSetFeedProcessingStatusList()
     {
         return !is_null($this->fields['FeedProcessingStatusList']['FieldValue']);
-
     }
 
     /**
@@ -389,8 +387,4 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountRequest extends Marketpl
     {
         return !is_null($this->fields['SubmittedToDate']['FieldValue']);
     }
-
-
-
-
 }

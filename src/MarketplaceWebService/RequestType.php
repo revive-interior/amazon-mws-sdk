@@ -6,15 +6,17 @@
  *      matching the request type.
  *   3. 'Regular' POST requests. This represents the multitude of MWS requests.
  */
-final class RequestType {
-  const POST_UPLOAD = 'POST_UPLOAD';
-  const POST_DOWNLOAD = 'POST_DOWNLOAD';
-  const POST_DEFAULT = 'POST_DEFAULT';
-  const UNKNOWN = 'UNKNOWN';
+final class RequestType
+{
+    const POST_UPLOAD = 'POST_UPLOAD';
+    const POST_DOWNLOAD = 'POST_DOWNLOAD';
+    const POST_DEFAULT = 'POST_DEFAULT';
+    const UNKNOWN = 'UNKNOWN';
 
-  public static function getRequestType($action) {
-    $requestType = null;
-    switch ($action) {
+    public static function getRequestType($action)
+    {
+        $requestType = null;
+        switch ($action) {
       case 'SubmitFeed':
         $requestType = self::POST_UPLOAD;
         break;
@@ -46,7 +48,6 @@ final class RequestType {
         break;
     }
     
-    return $requestType;
-  }
+        return $requestType;
+    }
 }
-?>

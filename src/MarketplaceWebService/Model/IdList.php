@@ -51,13 +51,13 @@ class MarketplaceWebService_Model_IdList extends MarketplaceWebService_Model
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Id .
      *
      * @return array of string Id
@@ -76,7 +76,7 @@ class MarketplaceWebService_Model_IdList extends MarketplaceWebService_Model
     public function setId($id)
     {
         if (!$this->isNumericArray($id)) {
-            $id =  array ($id);
+            $id =  array($id);
         }
         $this->fields['Id']['FieldValue'] = $id;
         return $this;
@@ -107,10 +107,6 @@ class MarketplaceWebService_Model_IdList extends MarketplaceWebService_Model
      */
     public function isSetId()
     {
-        return count ($this->fields['Id']['FieldValue']) > 0;
+        return count($this->fields['Id']['FieldValue']) > 0;
     }
-
-
-
-
 }

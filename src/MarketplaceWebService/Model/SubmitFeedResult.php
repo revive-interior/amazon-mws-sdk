@@ -51,13 +51,13 @@ class MarketplaceWebService_Model_SubmitFeedResult extends MarketplaceWebService
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_FeedSubmissionInfo'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the FeedSubmissionInfo.
      *
      * @return FeedSubmissionInfo FeedSubmissionInfo
@@ -100,10 +100,5 @@ class MarketplaceWebService_Model_SubmitFeedResult extends MarketplaceWebService
     public function isSetFeedSubmissionInfo()
     {
         return !is_null($this->fields['FeedSubmissionInfo']['FieldValue']);
-
     }
-
-
-
-
 }

@@ -55,17 +55,17 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'FeedSubmissionId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedSubmissionResult' => array ('FieldValue' => null, 'FieldType' => 'string'),
+        'FeedSubmissionResult' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -245,11 +245,11 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
         return !is_null($this->fields['FeedSubmissionId']['FieldValue']);
     }
 
-   /**
-     * Gets the value of the FeedSubmissionResult property.
-     *
-     * @return string FeedSubmissionResult
-     */
+    /**
+      * Gets the value of the FeedSubmissionResult property.
+      *
+      * @return string FeedSubmissionResult
+      */
     public function getFeedSubmissionResult()
     {
         return $this->fields['FeedSubmissionResult']['FieldValue'];
@@ -289,6 +289,4 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
     {
         return !is_null($this->fields['FeedSubmissionResult']['FieldValue']);
     }
-
-
 }

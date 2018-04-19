@@ -53,14 +53,14 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
         'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportSchedule')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -124,7 +124,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
     public function setReportScheduleList($reportSchedule)
     {
         if (!$this->_isNumericArray($reportSchedule)) {
-            $reportSchedule =  array ($reportSchedule);
+            $reportSchedule =  array($reportSchedule);
         }
         $this->fields['ReportSchedule']['FieldValue'] = $reportSchedule;
         return $this;
@@ -156,10 +156,6 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
      */
     public function isSetReportSchedule()
     {
-        return count ($this->fields['ReportSchedule']['FieldValue']) > 0;
+        return count($this->fields['ReportSchedule']['FieldValue']) > 0;
     }
-
-
-
-
 }

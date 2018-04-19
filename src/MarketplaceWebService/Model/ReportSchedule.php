@@ -55,7 +55,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Schedule' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ScheduledDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
@@ -63,7 +63,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the ReportType property.
      *
      * @return string ReportType
@@ -197,8 +197,4 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
     {
         return !is_null($this->fields['ScheduledDate']['FieldValue']);
     }
-
-
-
-
 }

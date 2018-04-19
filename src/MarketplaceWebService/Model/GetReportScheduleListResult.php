@@ -55,7 +55,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
         'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportSchedule')),
@@ -63,7 +63,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the NextToken property.
      *
      * @return string NextToken
@@ -172,7 +172,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
     public function setReportScheduleList($reportSchedule)
     {
         if (!$this->_isNumericArray($reportSchedule)) {
-            $reportSchedule =  array ($reportSchedule);
+            $reportSchedule =  array($reportSchedule);
         }
         $this->fields['ReportSchedule']['FieldValue'] = $reportSchedule;
         return $this;
@@ -204,10 +204,6 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      */
     public function isSetReportSchedule()
     {
-        return count ($this->fields['ReportSchedule']['FieldValue']) > 0;
+        return count($this->fields['ReportSchedule']['FieldValue']) > 0;
     }
-
-
-
-
 }
