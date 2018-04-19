@@ -1,3 +1,4 @@
 /vendor
 /src/MarketplaceWebService/Samples
 /src/MarketplaceWebService/Mock
+.php_cs.cache
